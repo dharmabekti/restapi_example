@@ -128,6 +128,23 @@ CREATE TABLE `limits` (
 insert  into `limits`(`id`,`uri`,`count`,`hour_started`,`api_key`) values 
 (1,'uri:buku/index:get',7,1667315623,'ncp123');
 
+/*Table structure for table `user` */
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `user` */
+
+insert  into `user`(`id`,`name`,`username`,`password`) values 
+(1,'Administrator','admin','f5d054006e805e467697b3ca8651429006c8f1cad95413d2eb89469fa520d3cb0fa875b898fcd8b2b8278f662d29884822391ac176f6462ae2825871fbd4128d');
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
