@@ -1,14 +1,16 @@
 <?php
 
-use chriskacerguis\RestServer\RestController;
+require_once APPPATH . 'controllers/Auth.php';
+
 use PhpOffice\PhpSpreadsheet\Reader\Xls;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 
-class Buku extends RestController
+class Buku extends Auth
 {
 	function __construct()
 	{
 		parent::__construct();
+		$this->cektoken();
 		$this->load->model('m_buku', 'buku');
 		$this->methods['index_get']['limit'] = 10;
 	}
