@@ -1,6 +1,6 @@
 /*
-SQLyog Professional v12.5.1 (64 bit)
-MySQL - 10.4.24-MariaDB : Database - webservis
+SQLyog Professional v12.5.1 (32 bit)
+MySQL - 10.4.27-MariaDB : Database - webservis
 *********************************************************************
 */
 
@@ -12,7 +12,7 @@ MySQL - 10.4.24-MariaDB : Database - webservis
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`webservis` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`webservis` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
 USE `webservis`;
 
@@ -35,7 +35,7 @@ CREATE TABLE `buku` (
   `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
   `deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `buku` */
 
@@ -51,7 +51,8 @@ insert  into `buku`(`id`,`judul`,`penulis`,`tahun`,`penerbit`,`cover`,`stok`,`ha
 (13,'Cepat Pinter Berhitung Matematika','Dharma',2020,'Andi','',100,20000,25000,2,'2022-09-23 21:48:38','2022-09-23 21:48:38',NULL),
 (14,'Kungfu Boy','Nyoamn S. Pandit',2018,'Gramedia','',100,95000,100000,1,'2022-09-23 21:55:43','2022-09-23 21:55:43',NULL),
 (15,'Kungfu Boy','Nyoamn S. Pandit',2018,'Gramedia','./uploads/buku/1663944962.jpeg',100,95000,100000,1,'2022-09-23 21:56:02','2022-09-23 21:56:02',NULL),
-(16,'Ayah','Andrea Hirata',2014,'Bentang','',50,65000,70000,1,'2022-09-23 21:56:36','2022-09-23 21:56:36',NULL);
+(16,'Ayah','Andrea Hirata',2014,'Bentang','',50,65000,70000,1,'2022-09-23 21:56:36','2022-09-23 21:56:36',NULL),
+(19,'SIWEB','Anom',2022,'Andi','./uploads/buku/1669910859.jpg',100,85000,100000,2,'2022-12-01 23:07:39','2022-12-01 23:07:39',NULL);
 
 /*Table structure for table `galeri` */
 
@@ -64,7 +65,7 @@ CREATE TABLE `galeri` (
   `path` varchar(150) NOT NULL,
   `size` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `galeri` */
 
@@ -80,7 +81,7 @@ CREATE TABLE `kategori` (
   `id` int(3) NOT NULL AUTO_INCREMENT,
   `nama_kategori` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `kategori` */
 
@@ -103,7 +104,7 @@ CREATE TABLE `keys` (
   `ip_addresses` text DEFAULT NULL,
   `date_created` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 /*Data for the table `keys` */
 
@@ -121,7 +122,7 @@ CREATE TABLE `limits` (
   `hour_started` int(11) NOT NULL,
   `api_key` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 /*Data for the table `limits` */
 
@@ -138,7 +139,7 @@ CREATE TABLE `user` (
   `username` varchar(20) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `user` */
 
